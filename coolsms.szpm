@@ -1,0 +1,80 @@
+{
+  "name": "coolsms",
+  "version": "1.0.0",
+  "vendor": "coolsms",
+  "license": "MIT",
+  "url": "https://coolsms.co.kr/",
+  "buildhost": "localhost",
+  "builddate": "2020-18-03 00:00:00 UTC",
+  "change_log": [
+    {
+      "version": "1.0.0",
+      "date": "2020-18-03 00:00:00 UTC",
+      "log": "init"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Add coolsms SMS Gateway"
+    }
+  ],
+  "files": [
+    {
+      "location": "app/models/channel/driver/sms/coolsms.rb",
+      "permission": 644,
+      "encode": "base64",
+      "content": "Y2xhc3MgQ2hhbm5lbDo6RHJpdmVyOjpTbXM6OkNvb2xzbXMKICBOQU1FID0gJ3Ntcy9jb29sc21z
+      Jy5mcmVlemUKCiAgZGVmIHNlbmQob3B0aW9ucywgYXR0ciwgX25vdGlmaWNhdGlvbiA9IGZhbHNl
+      KQogICAgUmFpbHMubG9nZ2VyLmluZm8gIlNlbmRpbmcgU01TIHRvIHJlY2lwaWVudCAje2F0dHJb
+      OnJlY2lwaWVudF19IgoKICAgIHJldHVybiB0cnVlIGlmIFNldHRpbmcuZ2V0KCdpbXBvcnRfbW9k
+      ZScpCgogICAgUmFpbHMubG9nZ2VyLmluZm8gIkJhY2tlbmQgc2VuZGluZyBNYXNzZW52ZXJzYW5k
+      IFNNUyB0byAje2F0dHJbOnJlY2lwaWVudF19IgogICAgYmVnaW4KICAgICAgaWYgU2V0dGluZy5n
+      ZXQoJ2RldmVsb3Blcl9tb2RlJykgIT0gdHJ1ZQogICAgICAgIGhlYWRlciA9IGdldF9oZWFkZXIo
+      b3B0aW9ucywgYXR0cikKICAgICAgICB1cmkgPSBnZXRfdXJpKG9wdGlvbnMsIGF0dHIpCiAgICAg
+      ICAgbWVzc2FnZXMgPSBbeyB0bzogYXR0cls6cmVjaXBpZW50XSwKICAgICAgICAgICAgICAgICAg
+      ICAgIGZyb206IG9wdGlvbnNbOnNlbmRlcl0sIAogICAgICAgICAgICAgICAgICAgICAgdGV4dDog
+      YXR0cls6bWVzc2FnZV0sCiAgICAgICAgICAgICAgICAgICAgfV0KICAgICAgICAgICAgICAKICAg
+      ICAgICBodHRwID0gTmV0OjpIVFRQLm5ldyh1cmkuaG9zdCwgdXJpLnBvcnQpCiAgICAgICAgaHR0
+      cC51c2Vfc3NsID0gdHJ1ZQogICAgICAgIHJlcSA9IE5ldDo6SFRUUDo6UG9zdC5uZXcodXJpLnBh
+      dGgsICdDb250ZW50LVR5cGUnID0+ICdhcHBsaWNhdGlvbi9qc29uJykKICAgICAgICByZXEuYWRk
+      X2ZpZWxkKCdBdXRob3JpemF0aW9uJywgaGVhZGVyKQogICAgICAgIGlmIGJvZHkKICAgICAgICAg
+      IHJlcS5ib2R5ID0gYm9keS50b19qc29uCiAgICAgICAgZW5kCiAgICAgICAgcmVzID0gaHR0cC5y
+      ZXF1ZXN0KHJlcSkKICAgICAgICByZXNwb25zZSA9IEpTT04ucGFyc2UocmVzLmJvZHkpCiAgICAg
+      ICAgc3RhdHVzQ29kZSA9IHJlc3BvbnNlLnN0YXR1c0NvZGUKICAgICAgICBwdXRzIHN0YXR1c0Nv
+      ZGUKICAgICAgICBpZiAhc3RhdHVzQ29kZS5tYXRjaD8oJzIwMDAnKSAmJiAhc3RhdHVzQ29kZS5t
+      YXRjaD8oJzMwMDAnKQogICAgICAgICAgbWVzc2FnZSA9ICJSZWNlaXZlZCBub24tT0sgcmVzcG9u
+      c2UgZnJvbSBnYXRld2F5IFVSTCAnI3t1cml9JyIKICAgICAgICAgIFJhaWxzLmxvZ2dlci5lcnJv
+      ciAiI3ttZXNzYWdlfToiCiAgICAgICAgICByYWlzZSBtZXNzYWdlCiAgICAgICAgZW5kCiAgICAg
+      IGVuZAoKICAgICAgdHJ1ZQogICAgcmVzY3VlID0+IGUKICAgICAgbWVzc2FnZSA9ICJFcnJvciB3
+      aGlsZSBwZXJmb3JtaW5nIHJlcXVlc3QgdG8gZ2F0ZXdheSBVUkwgJyN7dXJpfSciCiAgICAgIFJh
+      aWxzLmxvZ2dlci5lcnJvciBtZXNzYWdlCiAgICAgIFJhaWxzLmxvZ2dlci5lcnJvciBlCiAgICAg
+      IHJhaXNlIG1lc3NhZ2UKICAgIGVuZAogIGVuZAoKICBkZWYgc2VsZi5kZWZpbml0aW9uCiAgICB7
+      CiAgICAgIG5hbWU6ICAgICAgICAgJ2Nvb2xzbXMnLAogICAgICBhZGFwdGVyOiAgICAgICdzbXMv
+      Y29vbHNtcycsCiAgICAgIG5vdGlmaWNhdGlvbjogWwogICAgICAgIHsgbmFtZTogJ29wdGlvbnM6
+      OmdhdGV3YXknLCBkaXNwbGF5OiAnR2F0ZXdheScsIHRhZzogJ2lucHV0JywgdHlwZTogJ3RleHQn
+      LCBsaW1pdDogMjAwLCBudWxsOiBmYWxzZSwgcGxhY2Vob2xkZXI6ICdodHRwczovL2dhdGUxLmdv
+      eXlhbW9iaWxlLmNvbS9zbXMvc2VuZHNtcy5hc3AnLCBkZWZhdWx0OiAnaHR0cHM6Ly9nYXRlMS5n
+      b3l5YW1vYmlsZS5jb20vc21zL3NlbmRzbXMuYXNwJyB9LAogICAgICAgIHsgbmFtZTogJ29wdGlv
+      bnM6OnRva2VuJywgZGlzcGxheTogJ0FQSSBLZXknLCB0YWc6ICdpbnB1dCcsIHR5cGU6ICd0ZXh0
+      JywgbGltaXQ6IDIwMCwgbnVsbDogZmFsc2UsIHBsYWNlaG9sZGVyOiAnWFhYWFhYWFhYWFhYWFhY
+      WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFgnIH0sCiAgICAgICAgeyBuYW1lOiAn
+      b3B0aW9uczo6c2VjcmV0JywgZGlzcGxheTogJ0FQSSBTZWNyZXQnLCB0YWc6ICdpbnB1dCcsIHR5
+      cGU6ICd0ZXh0JywgbGltaXQ6IDIwMCwgbnVsbDogZmFsc2UsIHBsYWNlaG9sZGVyOiAnWFhYWFhY
+      WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFgnIH0sCiAgICAgICAg
+      eyBuYW1lOiAnb3B0aW9uczo6c2VuZGVyJywgZGlzcGxheTogJ1NlbmRlcicsIHRhZzogJ2lucHV0
+      JywgdHlwZTogJ3RleHQnLCBsaW1pdDogMjAwLCBudWxsOiBmYWxzZSwgcGxhY2Vob2xkZXI6ICcw
+      MDQ5MTcxMDAwMDAwMCcgfSwKICAgICAgXQogICAgfQogIGVuZAoKICBwcml2YXRlCgogIGRlZiBn
+      ZXRfaGVhZGVyKG9wdGlvbnMsIGF0dHIpCiAgICBhcGlfa2V5ID0gb3B0aW9uc1s6dG9rZW5dCiAg
+      ICBhcGlfc2VjcmV0ID0gb3B0aW9uc1s6c2VjcmV0XQogICAgZGF0ZSA9IFRpbWUubm93LnN0cmZ0
+      aW1lKCclWS0lbS0lZFQlSDolTTolUy4lTCV6JykKICAgIHNhbHQgPSBTZWN1cmVSYW5kb20uaGV4
+      CiAgICBzaWduYXR1cmUgPSBPcGVuU1NMOjpITUFDLmhleGRpZ2VzdCgnU0hBMjU2JywgYXBpX3Nl
+      Y3JldCwgZGF0ZSArIHNhbHQpCiAgICByZXR1cm4gJ0hNQUMtU0hBMjU2IGFwaUtleT0nICsgYXBp
+      X2tleSArICcsIGRhdGU9JyArIGRhdGUgKyAnLCBzYWx0PScgKyBzYWx0ICsgJywgc2lnbmF0dXJl
+      PScgKyBzaWduYXR1cmUKICBlbmQKCiAgZGVmIGdldF91cmkob3B0aW9ucywgYXR0cikKICAgIHN0
+      ciA9IG9wdGlvbnNbOmdhdGV3YXldICsgJy9tZXNzYWdlcy92NC9zZW5kLW1hbnknCiAgICB1cmkg
+      PSBVUkkoc3RyKQogICAgcmV0dXJuIHVyaQogIGVuZAoKZW5kCg=="
+    },
+  ]
+}
+
