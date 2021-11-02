@@ -1,0 +1,1 @@
+# coolsms_zammad
