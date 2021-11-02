@@ -1,5 +1,5 @@
-class Channel::Driver::Sms::Coolsms
-  NAME = 'sms/coolsms'.freeze
+class Channel::Driver::Sms::Coolsmsgsdc
+  NAME = 'sms/coolsmsgsdc'.freeze
 
   def send(options, attr, _notification = false) 
     puts "Starting send function."
@@ -12,10 +12,11 @@ class Channel::Driver::Sms::Coolsms
       if Setting.get('developer_mode') != true
         header = get_header(options, attr)
         uri = get_uri(options, attr)
-        messages = [{ to: attr[:recipient],
-                      from: options[:sender], 
-                      text: attr[:message],
-                    }]
+        messages = {messages: [{ :to   => attr[:recipient],
+                                 :from => options[:sender], 
+                                 :text => attr[:message],
+                              }]
+                   }
               
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
@@ -25,9 +26,8 @@ class Channel::Driver::Sms::Coolsms
         req.body = messages.to_json
         res = http.request(req)
         response = JSON.parse(res.body)
-        statusCode = response.statusCode
-        puts statusCode
-        if !statusCode.match?('2000') && !statusCode.match?('3000')
+        statusCode = response["status"]
+        if !statusCode == 'COMPLETE' && !statusCode = 'SENDING'
           message = "Received non-OK response from gateway URL '#{uri}'"
           Rails.logger.error "#{message}:"
           raise message
@@ -45,8 +45,8 @@ class Channel::Driver::Sms::Coolsms
 
   def self.definition
     {
-      name:         'coolsms',
-      adapter:      'sms/coolsms',
+      name:         'coolsmsgsdc',
+      adapter:      'sms/coolsmsgsdc',
       notification: [
         { name: 'options::gateway', display: 'Gateway', tag: 'input', type: 'text', limit: 200, null: false, placeholder: 'https://gate1.goyyamobile.com/sms/sendsms.asp', default: 'https://gate1.goyyamobile.com/sms/sendsms.asp' },
         { name: 'options::token', display: 'API Key', tag: 'input', type: 'text', limit: 200, null: false, placeholder: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' },
