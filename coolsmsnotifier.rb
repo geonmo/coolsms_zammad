@@ -1,10 +1,12 @@
 class Channel::Driver::Sms::Coolsmsgsdc
-  NAME = 'sms/coolsmsgsdc'.freeze
+  NAME = 'sms/coolsmsnotifier'.freeze
+
+  def fetchable?(_channel)
+    false
+  end
 
   def send(options, attr, _notification = false) 
-    puts "Starting send function."
     Rails.logger.info "Sending SMS to recipient #{attr[:recipient]}"
-
     return true if Setting.get('import_mode')
 
     Rails.logger.info "Backend sending Coolsms to #{attr[:recipient]}"
@@ -45,13 +47,14 @@ class Channel::Driver::Sms::Coolsmsgsdc
 
   def self.definition
     {
-      name:         'coolsmsgsdc',
-      adapter:      'sms/coolsmsgsdc',
+      name:         'coolsmsnotifier',
+      adapter:      'sms/coolsmsnotifier',
       notification: [
         { name: 'options::gateway', display: 'Gateway', tag: 'input', type: 'text', limit: 200, null: false, placeholder: 'https://api.coolsms.co.kr', default: 'https://api.coolsms.co.kr' },
+        { name: 'options::prefix', display: 'Prefix URL', tag: 'input', type: 'text', limit: 200, null: false, placeholder: '/messages/v4/send-many', default: '/messages/v4/send-many' },
         { name: 'options::token', display: 'API Key', tag: 'input', type: 'text', limit: 200, null: false, placeholder: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' },
         { name: 'options::secret', display: 'API Secret', tag: 'input', type: 'text', limit: 200, null: false, placeholder: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' },
-        { name: 'options::sender', display: 'Sender', tag: 'input', type: 'text', limit: 200, null: false, placeholder: '00491710000000' },
+        { name: 'options::sender', display: 'Sender', tag: 'input', type: 'text', limit: 200, null: false, placeholder: '010XXXXXXXX' },
       ]
     }
   end
@@ -68,7 +71,7 @@ class Channel::Driver::Sms::Coolsmsgsdc
   end
 
   def get_uri(options, attr)
-    str = options[:gateway] + '/messages/v4/send-many'
+    str = options[:gateway] + options[:prefix]
     uri = URI(str)
     return uri
   end
