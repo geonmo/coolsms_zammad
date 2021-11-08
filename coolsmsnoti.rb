@@ -1,5 +1,5 @@
-class Channel::Driver::Sms::Coolsmsgsdc
-  NAME = 'sms/coolsmsnotifier'.freeze
+class Channel::Driver::Sms::Coolsmsnoti
+  NAME = 'sms/coolsmsnoti'.freeze
 
   def fetchable?(_channel)
     false
@@ -47,8 +47,8 @@ class Channel::Driver::Sms::Coolsmsgsdc
 
   def self.definition
     {
-      name:         'coolsmsnotifier',
-      adapter:      'sms/coolsmsnotifier',
+      name:         'coolsmsnoti',
+      adapter:      'sms/coolsmsnoti',
       notification: [
         { name: 'options::gateway', display: 'Gateway', tag: 'input', type: 'text', limit: 200, null: false, placeholder: 'https://api.coolsms.co.kr', default: 'https://api.coolsms.co.kr' },
         { name: 'options::prefix', display: 'Prefix URL', tag: 'input', type: 'text', limit: 200, null: false, placeholder: '/messages/v4/send-many', default: '/messages/v4/send-many' },
